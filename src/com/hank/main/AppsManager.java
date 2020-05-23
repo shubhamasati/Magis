@@ -28,9 +28,9 @@ public class AppsManager
     static String logout_path = "";
     static String stutdown_path = " ";
     
-    static Runtime r = Runtime.getRuntime();
+    static Runtime r = Runtime.getRuntime(); //python class
     
-    static Robot robot ;
+    static Robot robot;
     
     public static void open(String s) throws IOException, InterruptedException, AWTException
     {

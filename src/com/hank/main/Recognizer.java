@@ -11,29 +11,40 @@ import net.sourceforge.javaflacencoder.FLACFileWriter;
 
 public class Recognizer {
     
-     final Microphone mic = new Microphone(FLACFileWriter.FLAC);
-     GSpeechDuplex duplex = new GSpeechDuplex("AIzaSyCLNgQvvOtqwnPzZvvQLTilzNt1a_etaw4");
-     GSpeechResponseListener rl;
-     Decide decide;
-    boolean first = true;
+    //Google API class
+    final Microphone mic = new Microphone(FLACFileWriter.FLAC); //FLAC format
+     
+    //google API
+    GSpeechDuplex duplex = new GSpeechDuplex("AIzaSyCLNgQvvOtqwnPzZvvQLTilzNt1a_etaw4");
+    
+    //google API
+    GSpeechResponseListener rl;
+    
+    //
+    Decide decide; //Decide class 
+
+  
+    
     public Recognizer(){
         
          decide = new Decide();
+
          duplex.setLanguage("en");
          
          
         rl =   new GSpeechResponseListener()
        {
           String old_text = "";
-       String temp = "";
+          String temp = "";
+      
       public void onResponse(GoogleResponse gr)
       {
           String output = "";
-          output = gr.getResponse();
+          output = gr.getResponse(); //return recognize words
           if (gr.getResponse() == null)
           {
-           this.old_text = temp;
-           if(this.old_text.contains("(")) {
+            this.old_text = temp;
+            if(this.old_text.contains("(")) {
             this.old_text = this.old_text.substring(0, this.old_text.indexOf('('));
           }
           String search =this.old_text;

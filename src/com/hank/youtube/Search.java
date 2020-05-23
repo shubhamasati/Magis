@@ -120,7 +120,7 @@ public class Search {
     }
 
     
-
+    
     /*
      * Prints out all results in the Iterator. For each result, print the
      * title, video ID, and thumbnail.

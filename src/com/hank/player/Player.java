@@ -18,6 +18,7 @@ import javazoom.jl.decoder.JavaLayerException;
 public class Player {
     
     javazoom.jl.player.Player p;
+    
     public boolean isPlaying()
     {
        return p.isComplete();

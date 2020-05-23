@@ -18,7 +18,7 @@ import com.hank.player.Player;
  */
 public class Synthesizer {
     
-     static Synthesiser syn = new Synthesiser("en");
+    static Synthesiser syn = new Synthesiser("en");
     
     public static void saytext(String text) throws IOException, JavaLayerException{
         

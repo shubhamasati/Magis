@@ -20,12 +20,14 @@ import javax.sound.sampled.LineUnavailableException;
 
 
 public class Main 
-{
+{   
+	//Entry Point
     public static void main(String[] args) throws MalformedURLException 
     {
-        Recognizer reco = new Recognizer();
+        Recognizer reco = new Recognizer(); //Object of recognizer class voice recognision
         try {
-			reco.recognise();
+			reco.recognise(); //method
+		
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (LineUnavailableException e) {
